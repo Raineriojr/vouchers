@@ -19,7 +19,7 @@ module.exports = {
             } else {
                 const teste_cpf = cpf1;
                 if(!cpf.isValid(teste_cpf)){
-                    return res.status(400).send({ mensagem: 'CPF inválido.' }); 
+                    return res.status(400).send({ mensagem: 'CPF Inválido' }); 
                  } else {
             await trx('clientes').insert({
                 cpf: cpf1, 
