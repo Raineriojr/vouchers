@@ -14,8 +14,8 @@ module.exports = {
     
   },
 
-  production: {
-    client: 'postgresql',
+  staging: {
+    client: 'pg',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -30,7 +30,7 @@ module.exports = {
     }
   },
 
-  staging: {
+  production: {
     client: 'postgresql',
     connection: {
       database: process.env.DATABASE,
@@ -42,8 +42,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: './src/database/migrations',
-      tableName: 'knex_migrations'
+      directory: './src/database/migrations'
     },
     ssl: true
   }
