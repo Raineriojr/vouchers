@@ -12,4 +12,4 @@ app.use(routes);
 app.use(errors());
 
 dotenv.config();
-app.listen(process.env.PORT || 3333);
+app.listen(3333);
