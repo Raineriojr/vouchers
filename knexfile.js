@@ -38,6 +38,7 @@ module.exports = {
     connection: {
       BASE_URL,
       user: 'fshiseylikysca',
+      password: '88dc04f1c81051542ee7bfc6dbedfc8b46810f795c2998486ab8ce94b6a0fe62',
       host: 'ec2-34-231-56-78.compute-1.amazonaws.com'  
     },
     pool: {
