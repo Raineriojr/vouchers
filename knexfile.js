@@ -33,7 +33,10 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: BASE_URL = exec(`heroku config: get HEROKU_POSTGRESQL_NAVY_URL -a vouchers-meta-backend`) ,
+    connection: {
+      BASE_URL = exec('heroku config: get HEROKU_POSTGRESQL_NAVY_URL -a vouchers-meta-backend'),
+      port: 5433  
+    },
     pool: {
       min: 2,
       max: 10
