@@ -37,6 +37,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       BASE_URL,
+      user: 'fshiseylikysca',
       host: 'ec2-34-231-56-78.compute-1.amazonaws.com'  
     },
     pool: {
