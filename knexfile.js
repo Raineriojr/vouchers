@@ -36,7 +36,7 @@ module.exports = {
       database: process.env.DATABASE,
       user: process.env.DB_USER,
       password: process.env.DB_PASS,
-      host: 'ec2-34-231-56-78.compute-1.amazonaws.com'
+      host: process.env.DB_HOST
     },
     pool: {
       min: 2,
