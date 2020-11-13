@@ -1,5 +1,7 @@
 const { exec } = require('child_process');
 
+const BASE_URL = exec('heroku config: get HEROKU_POSTGRESQL_NAVY_URL -a vouchers-meta-backend')
+
 module.exports = {
 
   development: {
@@ -34,7 +36,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      BASE_URL = exec('heroku config: get HEROKU_POSTGRESQL_NAVY_URL -a vouchers-meta-backend'),
+      BASE_URL,
       port: 5433  
     },
     pool: {
