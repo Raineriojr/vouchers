@@ -15,7 +15,14 @@ routes.post('/login', celebrate({
     })
 }) , controllerLogin.create);
 
-routes.post('/captadores/cadastro', controllerCaptadores.create);
+routes.post('/captadores/cadastro', celebrate({
+    [Segments.BODY]: Joi.object().keys({
+        cpf_cap: Joi.string().required().length(11),
+        nome_cap: Joi.string().required().min(3),
+        email_cap: Joi.string().required().email(),
+        senha: Joi.string().required().min(8)
+    })
+}), controllerCaptadores.create);
 
 routes.get('/captadores', controllerCaptadores.index);
 
