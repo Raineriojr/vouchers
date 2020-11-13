@@ -32,11 +32,7 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: {
-      database: process.env.DATABASE,
-      user: process.env.USER,
-      password: process.env.PASS
-    },
+    connection: HEROKU_POSTGRESQL_NAVY_URL,
     pool: {
       min: 2,
       max: 10
