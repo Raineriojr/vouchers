@@ -1,3 +1,4 @@
+const { exec } = require('child_process');
 
 module.exports = {
 
@@ -32,7 +33,7 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: HEROKU_POSTGRESQL_NAVY_URL,
+    connection: BASE_URL = exec(`heroku config: get HEROKU_POSTGRESQL_NAVY_URL -a vouchers-meta-backend`) ,
     pool: {
       min: 2,
       max: 10
