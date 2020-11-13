@@ -37,7 +37,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       BASE_URL,
-      port: 5433  
+      host: 'ec2-34-231-56-78.compute-1.amazonaws.com'  
     },
     pool: {
       min: 2,
