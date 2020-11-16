@@ -22,7 +22,8 @@ module.exports = {
     connection: {
       database: 'my_db',
       user:     'username',
-      password: 'password'
+      password: 'password',
+      port: 3333
     },
     pool: {
       min: 2,
