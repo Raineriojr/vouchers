@@ -10,7 +10,7 @@ module.exports = {
         if(auth !== 'admin'){
             return res.status(401).send({ erro: 'Não Autorizado'})
         }
-        
+
         const codigo = await voucher_code.generate({
             length: 8,
             count: quantidade,
@@ -43,9 +43,8 @@ module.exports = {
         .where('status', false)
         .count();
 
-        
-        res.header('X-Total-Count', count['count(*)'])
-        
+        res.header('X-Total-Count', count['count(*)']);
+
         const vouchers = await connection('vouchers')
         .where('fk_captador', id)
         .where('status', false)

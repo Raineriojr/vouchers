@@ -7,7 +7,8 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors({
-    origin: ("Access-Control-Allow-Origin", "https://exp.host/@raineriojr/Vouchers") 
+    origin: ("Access-Control-Allow-Origin", "https://exp.host/@raineriojr/Vouchers"),
+    allowedHeaders: ("Acess-Control-Exposed-Headers", "X-Total-Count") 
 }))
 
 app.use(express.json());
