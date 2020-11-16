@@ -4,8 +4,13 @@ const moment = require('moment');
 
 module.exports = {
     async create (req, res){
+        const auth = req.headers.authorization;
         const { desconto, quantidade, fk_captador, curso } = req.body;
 
+        if(auth !== 'admin'){
+            return res.status(401).send({ erro: 'Não Autorizado'})
+        }
+        
         const codigo = await voucher_code.generate({
             length: 8,
             count: quantidade,
