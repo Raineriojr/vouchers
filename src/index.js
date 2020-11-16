@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors({
-    origin: 'https://vouchers-meta-backend.herokuapp.com'
+    origin: 'https://expo.io/--/to-exp/exp%3A%2F%2Fexp.host%2F%40raineriojr%2FVouchers'
 }))
 
 app.use(express.json());
