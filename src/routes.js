@@ -41,11 +41,7 @@ routes.post('/voucher', celebrate({
     })
 }) , controllerVoucher.create);
 
-routes.get('/vouchers_disponiveis/captador/:id', celebrate({
-    [Segments.PARAMS]: Joi.object().keys({
-        id: Joi.number().required(),
-    })
-}) , controllerVoucher.index);
+routes.get('/vouchers_disponiveis/captador/:id', controllerVoucher.index);
 
 
 routes.get('/buscar/voucher', controllerVoucher.search);
