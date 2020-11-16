@@ -53,7 +53,11 @@ module.exports= {
         
         if(auth !== 'admin'){
             return res.status(401).send({ erro: 'Não Autorizado'})
-        }        
+        }  
+        
+        if(id == 1){
+            return res.status(401).send({ erro: 'Não Autorizado'})
+        }
 
         await connection('captadores').where('id', id).delete();
 
