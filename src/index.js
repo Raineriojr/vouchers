@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors({
     origin: ("Access-Control-Allow-Origin", "https://exp.host/@raineriojr/Vouchers"),
-    exposedHeaders: "X-Total-Count"
+    "Access-Control-Expose-Headers": "X-Total-Count"
 }))
 
 app.use(express.json());
