@@ -43,7 +43,7 @@ module.exports = {
         .where('status', false)
         .count();
 
-        res.header('X-Total-Count', count['count(*)']);
+        res.header('X-Total-Count', count);
 
         const vouchers = await connection('vouchers')
         .where('fk_captador', id)
